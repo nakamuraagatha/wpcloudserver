@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Wordpress Cloud Server</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://wpcloudserver.site/"/>
+  <updated>2018-01-25T21:15:36.778Z</updated>
+  <id>https://wpcloudserver.site/</id>
+  
+  <author>
+    <name>Iman Sugirman</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cara Install SSL LetsEncrypt dengan Certbot untuk Nginx</title>
+    <link href="https://wpcloudserver.site/cara-install-ssl-letsencrypt-dengan-certbot-untuk-nginx/"/>
+    <id>https://wpcloudserver.site/cara-install-ssl-letsencrypt-dengan-certbot-untuk-nginx/</id>
+    <published>2018-01-25T12:10:36.000Z</published>
+    <updated>2018-01-25T21:15:36.778Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://nos.wjv-1.neo.id/blog/ubuntu16.04_tw_Kevin.png" alt="Cara Install LEMP Stack di Server Ubuntu 16.04"></p><h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>Let’s Encrypt adalah Certificate Authority (CA) yang menyediakan cara mudah untuk mendapatkan dan menginstal sertifikat TLS / SSL gratis, sehingga memungkinkan HTTPS terenkripsi di server web. Ini menyederhanakan proses dengan menyediakan klien perangkat lunak, Certbot, yang mencoba mengotomatisasi sebagian besar (jika tidak semua) dari langkah-langkah yang diperlukan. Saat ini, seluruh proses mendapatkan dan memasang sertifikat sepenuhnya otomatis pada Apache dan Nginx.</p><p>Dalam tutorial ini, Anda akan menggunakan Certbot untuk mendapatkan sertifikat SSL gratis untuk Nginx di Ubuntu 16.04 dan menyiapkan sertifikat Anda untuk memperbarui secara otomatis.</p><h3 id="Persyaratan-Penginstallan"><a href="#Persyaratan-Penginstallan" class="headerlink" title="Persyaratan Penginstallan"></a>Persyaratan Penginstallan</h3><ul><li>Satu server Ubuntu 16.04 disiapkan dengan mengikuti <a href="https://bogordesain.com" target="_blank" rel="noopener">Setup server awal ini untuk tutorial Ubuntu 16.04</a>, termasuk pengguna sudo non-root dan firewall.</li><li>Nama domain yang terdaftar sepenuhnya. Tutorial ini akan menggunakan example.com secara keseluruhan. Anda bisa membeli nama domain di Namecheap, dapatkan secara gratis di Freenom, atau gunakan registrar domain pilihan Anda.</li><li>Kedua catatan DNS berikut disiapkan untuk server Anda. Anda dapat mengikuti tutorial ini untuk rincian tentang cara menambahkannya.<br>A record dengan <code>example.com</code> ditargetkan ke IP address.<br>A record dengan <code>www.example.com</code> public IP address anda.</li><li>Install Nginx di server Ubuntu 16.04.</li></ul><h3 id="Langkah-1-Install-Certbot"><a href="#Langkah-1-Install-Certbot" class="headerlink" title="Langkah 1 - Install Certbot"></a>Langkah 1 - Install Certbot</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:certbot/certbot</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install python-certbot-nginx</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      Intro
+Let’s Encrypt adalah Certificate Authority (CA) yang menyediakan cara mudah untuk mendapatkan dan menginstal sertifikat TLS / SSL gratis, sehingga memungkinkan HTTPS terenkripsi di server web. Ini menyederhanakan proses dengan menyediakan klien perangkat lunak, Certbot, yang mencoba mengotomat
+    
+    </summary>
+    
+    
+      <category term="digitalocean, nginx, letsencrypt, ubuntu, digitalocean" scheme="https://wpcloudserver.site/tags/digitalocean-nginx-letsencrypt-ubuntu-digitalocean/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cara Install LEMP Stack di Server Ubuntu 16.04</title>
+    <link href="https://wpcloudserver.site/cara-install-lemp-stack-di-server-ubuntu-16-04/"/>
+    <id>https://wpcloudserver.site/cara-install-lemp-stack-di-server-ubuntu-16-04/</id>
+    <published>2018-01-25T00:51:12.000Z</published>
+    <updated>2018-01-25T20:34:06.853Z</updated>
+    
+    <content type="html"><![CDATA[<!--![Cara Install LEMP Stack di Server Ubuntu 16.04](/images/lempstackubuntu.png)--><p><img src="https://nos.wjv-1.neo.id/blog/lempstackubuntu.png" alt="Cara Install LEMP Stack di Server Ubuntu 16.04"></p><h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>LEMP adalah singkatan dari Linux, Nginx, MySQL, PHP. Perangkat lunak LEMP stack adalah sekelompok perangkat lunak yang dapat digunakan untuk melayani halaman web dinamis dan aplikasi web. Ini adalah akronim yang menggambarkan sistem operasi Linux, dengan server web Nginx. Data backend disimpan dalam database MySQL dan proses dinamis ditangani oleh PHP.</p><h3 id="Langkah-1-Instal-Server-Nginx-Web"><a href="#Langkah-1-Instal-Server-Nginx-Web" class="headerlink" title="Langkah 1: Instal Server Nginx Web"></a>Langkah 1: Instal Server Nginx Web</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install nginx</span><br></pre></td></tr></table></figure><p>Jika Anda menjalankan firewall ufw, seperti yang dijelaskan dalam panduan penyiapan awal, Anda perlu mengizinkan koneksi ke Nginx. Nginx register sendiri dengan ufw saat instalasi, jadi prosedurnya agak lurus ke depan.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw allow <span class="string">'Nginx HTTP'</span></span><br><span class="line">sudo ufw status</span><br></pre></td></tr></table></figure><h4 id="Outputnya-akan-seperti-ini"><a href="#Outputnya-akan-seperti-ini" class="headerlink" title="Outputnya akan seperti ini"></a>Outputnya akan seperti ini</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Output</span><br><span class="line">Status: active</span><br><span class="line"></span><br><span class="line">To                         Action      From</span><br><span class="line">--                         ------      ----</span><br><span class="line">OpenSSH                    ALLOW       Anywhere                  </span><br><span class="line">Nginx HTTP                 ALLOW       Anywhere                  </span><br><span class="line">OpenSSH (v6)               ALLOW       Anywhere (v6)             </span><br><span class="line">Nginx HTTP (v6)            ALLOW       Anywhere (v6)</span><br></pre></td></tr></table></figure><p>Untuk Mengecek IP anda aktif</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -4 icanhazip.com</span><br></pre></td></tr></table></figure><h3 id="Step-2-Install-MySQL-to-Manage-Site-Data"><a href="#Step-2-Install-MySQL-to-Manage-Site-Data" class="headerlink" title="Step 2: Install MySQL to Manage Site Data"></a>Step 2: Install MySQL to Manage Site Data</h3><p>Install mysql dengan mengetik</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server</span><br><span class="line">mysql_secure_installation</span><br></pre></td></tr></table></figure><h3 id="Step-3-Install-PHP-for-Processing"><a href="#Step-3-Install-PHP-for-Processing" class="headerlink" title="Step 3: Install PHP for Processing"></a>Step 3: Install PHP for Processing</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php-fpm php-mysql</span><br></pre></td></tr></table></figure><p>Dan setelah terinstall sebaiknya di setup </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/php/7.0/fpm/php.ini</span><br></pre></td></tr></table></figure><p>Ubah dengan menghapus semikolon file “cgi.fix_pathinfo” supaya menjadi :</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cgi.fix_pathinfo=0</span><br></pre></td></tr></table></figure><p><img src="https://nos.wjv-1.neo.id/blog/ads.png" alt="Dapatkan Cloud Server Murah $5/Bulan"></p><p>Restart PHP </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart php7.0-fpm</span><br></pre></td></tr></table></figure><h3 id="Langkah-4-Konfigurasi-Nginx-untuk-Menggunakan-Prosesor-PHP"><a href="#Langkah-4-Konfigurasi-Nginx-untuk-Menggunakan-Prosesor-PHP" class="headerlink" title="Langkah 4: Konfigurasi Nginx untuk Menggunakan Prosesor PHP"></a>Langkah 4: Konfigurasi Nginx untuk Menggunakan Prosesor PHP</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/nginx/sites-available/default</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80 default_server;</span><br><span class="line">    listen [::]:80 default_server;</span><br><span class="line"></span><br><span class="line">    root /var/www/html;</span><br><span class="line">    index index.html index.htm index.nginx-debian.html;</span><br><span class="line"></span><br><span class="line">    server_name _;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ =404;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Kami perlu membuat beberapa perubahan pada file ini untuk situs kami.</p><p>First, we need to add index.php as the first value of our index directive so that files named index.php are served, if available, when a directory is requested.</p><p>Beberapa yang harus di modifikasi seperti nama server diubah dengan nama server : </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server_name</span><br></pre></td></tr></table></figure><p>Dan ada beberapa opsional ketika anda tidak ingin merubahnya biasanya menggunakan tanda pagar (#) dengan arti tidak aktif</p><p>Jika ingin anda aktifkan bisa menghapus tanda pagar itu contohnya pada .htaccess</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.htaccess</span><br></pre></td></tr></table></figure><p>Untuk lebih memperdalam mengkonfigurasi nginx anda bisa mengunjungi dokumentasi nginx <a href="http://nginx.org/en/docs/beginners_guide.html" target="_blank" rel="noopener">Nginx Documentation</a></p><p>Sehingga menjadi seperti ini</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80 default_server;</span><br><span class="line">    listen [::]:80 default_server;</span><br><span class="line"></span><br><span class="line">    root /var/www/html;</span><br><span class="line">    index index.php index.html index.htm index.nginx-debian.html;</span><br><span class="line"></span><br><span class="line">    server_name server_domain_or_IP;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        try_files $uri $uri/ =404;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location ~ \.php$ &#123;</span><br><span class="line">        include snippets/fastcgi-php.conf;</span><br><span class="line">        fastcgi_pass unix:/run/php/php7.0-fpm.sock;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location ~ /\.ht &#123;</span><br><span class="line">        deny all;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Untuk Test konfigurasi nginx apakah ada error atau tidaknya dalam konfigurasi bisa kita lihat dengan menggunakan perintah :</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -t</span><br></pre></td></tr></table></figure><p>Jika konfigurasi berhasil. Lalu masukan perintah :</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl reload nginx</span><br></pre></td></tr></table></figure><p>untuk mereload lagi pengaturan yang sudah anda konfigurasi</p><h3 id="Langkah-5-Buat-File-PHP-untuk-Menguji-Konfigurasi"><a href="#Langkah-5-Buat-File-PHP-untuk-Menguji-Konfigurasi" class="headerlink" title="Langkah 5: Buat File PHP untuk Menguji Konfigurasi"></a>Langkah 5: Buat File PHP untuk Menguji Konfigurasi</h3><p>Untuk menguji dan melihat info server php bisa menggunakan cara membuat file <strong>info.php</strong> seperti ini :</p><p>Buat file <strong>info.php</strong> di directory <strong>/var/www/html</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /var/www/html/info.php</span><br></pre></td></tr></table></figure><p>Isinya seperti dibawah :</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">phpinfo();</span><br></pre></td></tr></table></figure><p>Lalu akses file tersebut dengan mengunjungi :</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://server_domain_or_IP/info.php</span><br></pre></td></tr></table></figure><p>Dan previewnya seperti ini :</p><p><img src="https://nos.wjv-1.neo.id/blog/php_info.png" alt="Tampilan info.php"></p><p>Jika sudah selesai maka anda harus menghapusnya. Masukan perintah :</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /var/www/html/info.php</span><br></pre></td></tr></table></figure><p>Nah kurang lebih seperti itu</p>]]></content>
+    
+    <summary type="html">
+    
+      Intro
+LEMP adalah singkatan dari Linux, Nginx, MySQL, PHP. Perangkat lunak LEMP stack adalah sekelompok perangkat lunak yang dapat digunakan untuk melayani halaman web dinamis dan aplikasi web. Ini adalah akronim yang menggambarkan sistem operasi Linux, dengan server web Nginx. Data backend disimpan
+    
+    </summary>
+    
+    
+      <category term="digitalocean" scheme="https://wpcloudserver.site/tags/digitalocean/"/>
+    
+      <category term="ubuntu" scheme="https://wpcloudserver.site/tags/ubuntu/"/>
+    
+      <category term="lemp" scheme="https://wpcloudserver.site/tags/lemp/"/>
+    
+      <category term="nginx" scheme="https://wpcloudserver.site/tags/nginx/"/>
+    
+      <category term="server" scheme="https://wpcloudserver.site/tags/server/"/>
+    
+      <category term="blog" scheme="https://wpcloudserver.site/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tutorial Install Wordpress DigitalOcean</title>
+    <link href="https://wpcloudserver.site/tutorial-install-wordpress-digitalocean/"/>
+    <id>https://wpcloudserver.site/tutorial-install-wordpress-digitalocean/</id>
+    <published>2018-01-24T21:05:15.000Z</published>
+    <updated>2018-01-25T11:25:13.035Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>Wordpress adalah platform cms yang bagus</p>]]></content>
+    
+    <summary type="html">
+    
+      Intro
+Wordpress adalah platform cms yang bagus
+    
+    </summary>
+    
+      <category term="blog, digitalocean, tutorial, wordpress" scheme="https://wpcloudserver.site/categories/blog-digitalocean-tutorial-wordpress/"/>
+    
+    
+      <category term="digitalocean, cloudserver, wordpress" scheme="https://wpcloudserver.site/tags/digitalocean-cloudserver-wordpress/"/>
+    
+  </entry>
+  
+</feed>
